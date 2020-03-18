@@ -4,7 +4,7 @@ format long;
 syms x;
 f(x) = exp(x);
 
-disp("Test e^x")
+disp("---test exponential---")
 
 S3(x) = maclaurin(f, 3)
 S10(x) = maclaurin(f, 10)
