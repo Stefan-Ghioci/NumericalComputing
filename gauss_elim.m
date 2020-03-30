@@ -1,5 +1,5 @@
 function X = gauss_elim(A)
-%%GAUS_ELIM Gauss elimination algorithm for solving equation-system
+%%GAUS_ELIM Gauss Elimination (with partial pivoting) algorithm for solving equation-system
 % input:
 % A     -   equation-system associated augmented matrix
 % output:
