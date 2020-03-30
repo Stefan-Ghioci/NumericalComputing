@@ -1,4 +1,4 @@
-function test_gauss_elim()
+function test_gauss_and_lup()
 format long;
 
 disp ("Solving equation-system:")
@@ -13,6 +13,8 @@ disp("Matrix division solution:");
 disp(A\b);
 disp("Gaussian Elimination solution:");
 disp(gauss_elim([A b]));
+disp("LUP Decomposition solution:");
+disp(solve_with_lup(A,b));
 
 format short;
 end
