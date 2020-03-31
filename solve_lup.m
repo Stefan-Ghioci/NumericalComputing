@@ -1,5 +1,5 @@
-function X = solve_with_lup(A,b)
-%%SOLVE_WITH_LUP Solve equation-system with LUP decomposition
+function X = solve_lup(A,b)
+%%SOLVE_WITH_LUP Solve equation-system with LUP Decomposition
 % input:
 % A     - coefficient matrix
 % b     - free term matrix
