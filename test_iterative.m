@@ -17,5 +17,10 @@ error = 0.0001;
 
 disp("Jacobi method solution (error=" + error + ") in " + N + " iterations:")
 disp(x);
+
+[x,N]=gauss_seidel(A,b,error,999);
+
+disp("Gauss-Seidel method solution (error=" + error + ") in " + N + " iterations:")
+disp(x);
 format short;
 end

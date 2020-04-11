@@ -1,5 +1,5 @@
-function [x,N] = jacobi(A, b, error, max_iter)
-%%JACOBI Jacobi method for iterative strictly diagonally dominant equation-system solving
+function [x,N] = gauss_seidel(A, b, error, max_iter)
+%%JACOBI Gauss-Seidel method for iterative diagonally dominant equation-system solving
 % input:
 % A         - coefficient matrix
 % b         - free term matrix
@@ -14,8 +14,8 @@ L = -tril(A, -1);
 U = -triu(A, 1);
 D = A + L + U;
 
-T = D \ (L + U);
-c = D \ b;
+T = (D - L) \ U;
+c = (D - L) \ b;
 
 k = 0;
 x_k = b;
