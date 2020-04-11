@@ -12,7 +12,7 @@ b = A * (1:n)'
 disp("Expected solution:")
 disp((1:n)');
 
-error = 0.0001;
+error = 0.00000001;
 [x,N]=jacobi(A,b,error,999);
 
 disp("Jacobi method solution (error=" + error + ") in " + N + " iterations:")
@@ -22,5 +22,11 @@ disp(x);
 
 disp("Gauss-Seidel method solution (error=" + error + ") in " + N + " iterations:")
 disp(x);
+
+[x,N]=sor(A,b,error,999);
+
+disp("Successive OverRelaxation method solution (error=" + error + ") in " + N + " iterations:")
+disp(x);
+
 format short;
 end
