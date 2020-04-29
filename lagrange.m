@@ -1,11 +1,11 @@
 function y = lagrange(x, X, Y)
 %LAGRANGE Calculates value from dataset with Lagrange interpolation
 % input:
-% x - function argument
-% X - distinct values corresponding to x-axis
-% Y - distinct values corresponding to Y-axis (size equals to previous set)
+% x     -   function argument
+% X     -   distinct values corresponding to x-axis
+% Y     -   distinct values corresponding to Y-axis (size equals to previous set)
 % output:
-% y - interpolated function value
+% y     -   interpolated function value
 
 y = 0;
 
