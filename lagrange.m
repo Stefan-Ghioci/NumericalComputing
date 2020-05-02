@@ -1,4 +1,4 @@
-function y = lagrange(x, X, Y)
+function y = lagrange(X, Y)
 %LAGRANGE Calculates value from dataset with Lagrange interpolation
 % input:
 % x     -   function argument
@@ -7,18 +7,20 @@ function y = lagrange(x, X, Y)
 % output:
 % y     -   interpolated function value
 
-y = 0;
+syms y(x);
+y(x) = 0;
 
 [~,m] = size(X);
 
 for i=1:m
-    l = 1;
+    syms l(x);
+    l(x) = 1;
     for j=1:m
         if j ~= i
-            l = l * (x - X(j)) / (X(i) - X(j));
+            l(x) = l(x) * (x - X(j)) / (X(i) - X(j));
         end
     end
-    y = y + Y(i) * l;
+    y(x) = y(x) + Y(i) * l;
 end
 
 end

@@ -1,4 +1,4 @@
-function basis_poly_plot(n, X)
+function basis_poly_plot(X)
 %BASIS_POLY_PLOT Plot the Lagrange basis polynomials within a given degree
 % input:
 % n     -   maximum degree of polynomial to plot
@@ -6,8 +6,9 @@ function basis_poly_plot(n, X)
 
 [~,k] = size(X);
 
+
 hold on;
-for j=1:n
+for j=1:k
     syms l(x);
     l(x) = 1;
     for m=1:k
