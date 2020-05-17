@@ -21,8 +21,8 @@ Hf = hermite(X, Y, DY);
 hold on;
 
 fplot(Hf);
-
 fplot(f,'--r');
+legend("Hermite", "Real function")
 
 hold off;
 
