@@ -4,6 +4,7 @@ function I=romberg(f,a,b,epsi,nmax)
 % f     -   function
 % a     -   left margin
 % b     -   right margin
+% epsi  -   max error
 % nmax  -   max iteration count
 % output:
 % I     -   integral
